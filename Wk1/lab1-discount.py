@@ -7,6 +7,3 @@ discounted_cost = cost - cost * discount
 # print("Discounted cost", discounted_cost)
 discounted_label = "Discounted cost:"
 print(discounted_label, discounted_cost)
-
-# 7+2
-# 8*4
