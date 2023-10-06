@@ -9,14 +9,9 @@ def square(num):
     # Check that number is a positive integer
     # Insert conditonal that I totally do not know yet here
 
-    # Multiply the number by itself
-    # result = num * num
-
-    # Display result
-    return num * num
+    # Multiply number by itself and return result
+    return pow(num, 2)
 
 
 # Test
-print(square(2))
-print(square(10))
-print(square(100))
+print(f"{square(2)}, {square(10)}, {square(100)}")
