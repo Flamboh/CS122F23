@@ -10,10 +10,8 @@
 # https://stackoverflow.com/questions/70910711/cant-print-inch-and-feet-symbols-in-function For help with the print results f-string solution
 
 
-import math
-
 # Inititalize variables
-total_inches_in_cubic_yard = round(math.pow(36, 3)) # 36 inches in a in 1 dimensional yard to the 3rd power for cubic
+total_inches_in_cubic_yard = round(pow(36, 3)) # 36 inches in a in 1 dimensional yard to the 3rd power for cubic
 
 # Return cement amount in yards using cubic inches given thickness (t), width (w) and length (l) in inches
 def calc_yards_cement(t, w, l):

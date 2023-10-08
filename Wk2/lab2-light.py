@@ -9,11 +9,13 @@ speed_light_seconds = 186282
 
 # Define function to calculate light travel time for given distance
 def avg_light_travel_seconds(miles):
+    # return rounded miles / speed
     return round((miles / speed_light_seconds), 2)
 
 
 # Define function to display results of calculation
 def print_results(planetary_object, time_to_object):
+    # print light travels to planet in x secs
     print(f"Light travels from the sun to {planetary_object} an average of {time_to_object} seconds.")
 
 # Test

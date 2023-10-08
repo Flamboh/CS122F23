@@ -29,6 +29,7 @@ def print_travel_time(distance, speed):
 
     print(f"To travel {distance} miles at {speed} MPH will take {int(hours)} hr, {int(minutes)} min and {round(seconds)} sec")
 
+# Test
 print_travel_time(90, 55)
 print_travel_time(90, 70)
 print_travel_time(10, 25)
