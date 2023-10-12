@@ -23,7 +23,7 @@ def calc_yards_cement(t, w, l):
 
 # Output (print) results of calculating yards given thickness (t), width (w) and length (l) in inches
 def print_results(t, w, l):
-    print(f"A cement slab {t}\" thick, {w}\" wide and {l}\" long requires", calc_yards_cement(t, w, l), "cubic yards of cement")
+    print(f"A cement slab {t}\" thick, {w}\" wide and {l}\" long requires {calc_yards_cement(t, w, l)} cubic yards of cement")
 
 
 # Use created functions to display results
