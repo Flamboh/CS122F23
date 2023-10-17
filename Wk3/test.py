@@ -1,21 +1,23 @@
 import turtle
+import math
 
-def draw_square(t, size):
-    t.fd(size)
-    t.rt(90)
-    t.fd(size)
-    t.rt(90)
-    t.fd(size)
-    t.rt(90)
-    t.fd(size)
+t = turtle.Turtle()
 
+t.pu()
+t.rt(90)
+t.fd(200)
+t.pd()
+t.circle(212)
 
-morla = turtle.Turtle()
+# leg_a = 200
 
-# draw_square(morla, 100)
+# leg_b = 200
 
-for i in range(1, 100):
-    for j in range(1, 5):
-        draw_square(morla, j * i)
-    if i > 2:
-        turtle.Terminator(morla)
+# leg_c = math.sqrt(leg_a ** 2 + leg_b **2) 
+
+# t.rt(45)
+# t.fd(leg_a)
+# t.rt(90)
+# t.fd(leg_b)
+# t.rt(135)
+# t.fd(leg_c)
