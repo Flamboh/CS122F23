@@ -1,0 +1,13 @@
+Step1: prompt for year
+
+step2: check if year is a leap year
+
+step3: prompt for a day of the year
+
+step4: find month of year
+
+step5: display month
+
+step6: find day of year
+
+step7: display day of year
