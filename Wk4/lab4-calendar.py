@@ -75,12 +75,10 @@ def test_is_leap_year(start_year, end_year):
 
 def validate_is_leap_year(start_year, end_year):
     for year in range(start_year, end_year + 1):
-        a = calendar.isleap(year)
-        b = is_leap_year(year)
-        if a != b:
+        if calendar.isleap(year) != is_leap_year(year):
             print("Mismatch")
         else:
-            print("match")
+            print("Match")
         
 
 # Test

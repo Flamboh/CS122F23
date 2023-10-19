@@ -35,8 +35,12 @@ if is_leap_year(year):
 
 # step3: prompt for a day of the year
 day_of_year = int(input("Please enter a day: "))
-if day_of_year <= 0 or day_of_year > day_count:
-    print(f"Day must be between 1 and {day_count} for this year")
+if day_of_year <= 0:
+    print("Day of year must be > 0")
+    quit()
+
+elif day_of_year > day_count:
+    print(f"Day of year must be <= {day_count}")
     quit()
 
 # step4: loop through months
