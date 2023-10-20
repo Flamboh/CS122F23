@@ -146,7 +146,6 @@ def start():
 
 
         
-    days_feb = 28
     days_so_far = 0
     month = ""
     day_in_month = 0
@@ -156,7 +155,7 @@ def start():
 
     if not year:
         quit()
-        
+
     # step3: prompt for a day of the year
     day_of_year = int(input_day_of_year(year))
 
@@ -170,7 +169,6 @@ def start():
             days_so_far += get_days_in_month(year, month)
             # step6: check if the day of year is less than the days we've checked before if it is we are in correct month
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 # step7: calculate which day in the month we are
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
@@ -178,77 +176,66 @@ def start():
         elif month == 2:
             days_so_far += get_days_in_month(year, month)
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
 
         elif month == 3:
             days_so_far += get_days_in_month(year, month)
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
 
         elif month == 4:
             days_so_far += get_days_in_month(year, month)
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
 
         elif month == 5:
             days_so_far += get_days_in_month(year, month)
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
 
         elif month == 6:
             days_so_far += get_days_in_month(year, month)
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
 
         elif month == 7:
             days_so_far += get_days_in_month(year, month)
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
 
         elif month == 8:
             days_so_far += get_days_in_month(year, month)
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
 
         elif month == 9:
             days_so_far += get_days_in_month(year, month)
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
 
         elif month == 10:
             days_so_far += get_days_in_month(year, month)
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
 
         elif month == 11:
             days_so_far += get_days_in_month(year, month)
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
 
         elif month == 12:
             days_so_far += get_days_in_month(year, month)
             if day_of_year <= days_so_far:
-                month_str = translate_month(month)
                 day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
                 break
 
