@@ -22,7 +22,7 @@ month = ""
 day_in_month = 0
 
 # step1: prompt for year
-year = int(input("Please enter a year: "))
+year = int(input("Enter year: "))
 if year <= 0:
     print("Year must be > 0")
     quit()
@@ -34,7 +34,7 @@ if is_leap_year(year):
     days_feb += 1
 
 # step3: prompt for a day of the year
-day_of_year = int(input("Please enter a day: "))
+day_of_year = int(input("Enter day of year: "))
 if day_of_year <= 0:
     print("Day of year must be > 0")
     quit()

@@ -39,14 +39,14 @@ def valid_day_of_year(year, day_of_year):
         return True
     
 def input_year():
-    year = int(input("Please enter a year: "))
+    year = int(input("Enter year: "))
     if not valid_year(year):
         return 0
     else:
         return year
 
 def input_day_of_year(year):
-    day_of_year = int(input("Please enter a day: "))
+    day_of_year = int(input("Enter day of year: "))
     if valid_year(year) and valid_day_of_year(year, day_of_year):
         return day_of_year
     else:
