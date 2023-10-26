@@ -164,81 +164,14 @@ def start():
         quit()
     
     # step4: loop through months
+    # step5: check each month
     for month in range(1, 13):
-        # step5: check each month
-        if month == 1:
-            days_so_far += get_days_in_month(year, month)
-            # step6: check if the day of year is less than the days we've checked before if it is we are in correct month
-            if day_of_year <= days_so_far:
-                # step7: calculate which day in the month we are
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
-
-        elif month == 2:
-            days_so_far += get_days_in_month(year, month)
-            if day_of_year <= days_so_far:
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
-
-        elif month == 3:
-            days_so_far += get_days_in_month(year, month)
-            if day_of_year <= days_so_far:
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
-
-        elif month == 4:
-            days_so_far += get_days_in_month(year, month)
-            if day_of_year <= days_so_far:
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
-
-        elif month == 5:
-            days_so_far += get_days_in_month(year, month)
-            if day_of_year <= days_so_far:
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
-
-        elif month == 6:
-            days_so_far += get_days_in_month(year, month)
-            if day_of_year <= days_so_far:
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
-
-        elif month == 7:
-            days_so_far += get_days_in_month(year, month)
-            if day_of_year <= days_so_far:
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
-
-        elif month == 8:
-            days_so_far += get_days_in_month(year, month)
-            if day_of_year <= days_so_far:
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
-
-        elif month == 9:
-            days_so_far += get_days_in_month(year, month)
-            if day_of_year <= days_so_far:
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
-
-        elif month == 10:
-            days_so_far += get_days_in_month(year, month)
-            if day_of_year <= days_so_far:
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
-
-        elif month == 11:
-            days_so_far += get_days_in_month(year, month)
-            if day_of_year <= days_so_far:
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
-
-        elif month == 12:
-            days_so_far += get_days_in_month(year, month)
-            if day_of_year <= days_so_far:
-                day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
-                break
+        days_so_far += get_days_in_month(year, month)
+        # step6: check if the day of year is less than the days we've checked before if it is we are in correct month
+        if day_of_year <= days_so_far:
+            # step7: calculate which day in the month we are
+            day_in_month = day_of_year - (days_so_far - get_days_in_month(year, month)) 
+            break
 
     print(get_date_string(year, month, day_in_month))
 
