@@ -37,6 +37,7 @@ if is_leap_year(year):
 day_of_year = int(input("Enter day of year: "))
 if day_of_year <= 0:
     print("Day of year must be > 0")
+    # I know quit from previous coding experience so I thought to use that as it is easier than the other options
     quit()
 
 elif day_of_year > day_count:

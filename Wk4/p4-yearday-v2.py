@@ -154,6 +154,7 @@ def start():
     year = int(input_year())
 
     if not year:
+        # I know quit from previous coding experience so I thought to use that as it is easier than the other options
         quit()
 
     # step3: prompt for a day of the year

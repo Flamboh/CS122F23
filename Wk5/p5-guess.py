@@ -9,6 +9,7 @@ Description: Write a program for a word guessing game
 def input_guess_word():
     guess_word = input("Enter a guess word (blank to quit): ")
     if guess_word == "":
+        # I know quit from previous coding experience and decided to use it rather than breaking the while loop
         quit()
     else:
         return guess_word
