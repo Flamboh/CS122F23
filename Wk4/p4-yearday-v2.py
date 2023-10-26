@@ -11,13 +11,13 @@ def is_leap_year(year):
     Check if a given year is a leap year
     
     Args:
-        year (int): """
+        year (int):
+    """
     if year % 4 == 0:
         if year % 100 == 0 and year % 400 != 0:
             return False
         else:
             return True
-    
     else: 
         return False
     
@@ -142,10 +142,7 @@ def get_date_string(year, month, day):
         return f"{translate_month(month)} {day}, {year}"
 
 
-def start():
-
-
-        
+def start():   
     days_so_far = 0
     month = ""
     day_in_month = 0
@@ -174,8 +171,5 @@ def start():
             break
 
     print(get_date_string(year, month, day_in_month))
-
-
-
 
 start()
