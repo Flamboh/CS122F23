@@ -59,23 +59,21 @@ def start():
             # Increment total guesses
             guesses_total += 1
             # Check for already guessed letter
-            if guess_letter in guesses_str:
-                if guess_letter in guess_word:
-                    print(f"\t> {guess_letter} already guessed and found")
-                    print(f"\t> Guesses so far: {guesses_str}")
-                else:
-                    print(f"\t> {guess_letter} already guessed and not found")
-                    print(f"\t> Guesses so far: {guesses_str}")
+            if guess_letter in guesses_matched:
+                print(f"\t> {guess_letter} already guessed and found")
+                print(f"\t> Guesses so far: {guesses_matched + guesses_unmatched}")
+            elif guess_letter in guesses_unmatched:
+                print(f"\t> {guess_letter} already guessed and not found")
+                print(f"\t> Guesses so far: {guesses_matched + guesses_unmatched}")
             # Check if letter is in word
             elif guess_letter in guess_word:
                 guesses_matched += guess_letter
-                guesses_str += guess_letter
                 print(f"\t> {guess_letter} found")
-                print(f"\t> Guesses so far: {guesses_str}")
+                print(f"\t> Guesses so far: {guesses_matched + guesses_unmatched}")
                 # Check if letters in word to guess have been guessed
                 correct_letters = 0
                 for c in guess_word:
-                    if c in guesses_str:
+                    if c in guesses_matched:
                         correct_letters += 1
                 # If they all have been guessed break loop
                 if correct_letters == len(guess_word):
@@ -84,9 +82,8 @@ def start():
             # Else the letter was not in the word
             else:
                 guesses_unmatched += guess_letter
-                guesses_str += guess_letter
                 print(f"\t> {guess_letter} not found")
-                print(f"\t> Guesses so far: {guesses_str}")
+                print(f"\t> Guesses so far: {guesses_matched + guesses_unmatched}")
     # Display results after loop has been broken
     print_results(guess_word, guesses_matched, guesses_unmatched, guesses_total)
 
