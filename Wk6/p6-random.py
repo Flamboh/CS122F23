@@ -2,7 +2,7 @@
 CS 122 Fall 2023 Project 6 Random
 Author: Oliver Boorstein
 Credit:
-Description: Read lines of file with numbers and add up while skipping comments and display aeverage.
+Description: Read lines of file with numbers and add up while skipping comments and display average.
 """
 
 from p6_shared import pad_left, pad_right
