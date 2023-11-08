@@ -4,6 +4,8 @@ Author: Oliver Boorstein
 Credit:
 Description: Display cool info about words_alpha.txt
 """
+
+# Copied reverse() from project 3
 def reverse(str):
     """
     Reverses given string
