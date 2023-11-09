@@ -79,7 +79,7 @@ word_list = open("wk7\words_alpha.txt")
 palindrome_count = 0
 
 for line in word_list:
-    if line.strip() == reverse(line.strip()):
+    if line.strip() == reverse(line.strip()): # Grabbed reverse from week 3
         palindrome_count += 1
 print(f"Palindromes: {palindrome_count} ({round(palindrome_count/count*100, 2)}%)")
 word_list.close()
