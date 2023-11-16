@@ -61,15 +61,24 @@ def add_group_data(d):
     list_groups(d)
 
     while True:
+        # Get group to add data to
         group = input("Enter group (empty to cancel): ")
+        # End loop if group blank
         if group == '':
             break
+        # If group does not exist reprompt
         elif group not in d:
             print("Group does not exist")
         else:
+            # We are going to end up adding one item which contains a dictionary with the fields of the group as keys
+            # and with our inputs as the values for each key
             item = {}
+            # for each field (0, x)
             for field_index in range(len(d[group]['__fields__'])):
-                item[d[group]['__fields__'][field_index]] = input(f"Enter {d[group]['__fields__'][field_index]}: ")    
+                # Adding a key to item of the name of the field we are on
+                # Setting the value associated with that key to our input
+                item[d[group]['__fields__'][field_index]] = input(f"Enter {d[group]['__fields__'][field_index]}: ")
+            # Add the dictionary item to the end of the list of __data__    
             d[group]['__data__'].append(item)
             print()       
     print()
@@ -79,19 +88,28 @@ def list_group_data(d):
     list_groups(d)
 
     while True:
+        # Get group to list info for
         group = input("Enter group name (empty to cancel): ")
+        # If blank end loop
         if group == '':
             break
+        # If group does not exist reprompt
         elif group not in d:
             print("Group does not exist")
+        
         else:
+            # Number of items for printing
             item_num = 0
+            # For each item that we stored earlier in data
             for item in d[group]['__data__']:
+                # Blank list
                 t = []
+                # for each key that is in item
                 for key in item:
+                    # add to end of blank list the key name and the value associated with the key
                     t.append(f"{key} = {item[key]}")
-                item_list = ', '.join(t)    
-                print(f"{item_num} {item_list}")
+                # Set item_list equal to a comma delimitted list of the values and keys
+                print(f"{item_num} {', '.join(t)}")
                 item_num += 1
             print()    
     print()
@@ -102,18 +120,24 @@ print("This program creates groups with dynamic properties\n")
 
 d = {}
 while True:
+    print(d)
     # Get command
     command = input("Command (empty or X to quit, ? for help): ").strip().upper()
     # Check if command is to exit
     if command == '' or command == 'X':
         break
+    # Check if command is for help
     elif command == '?':
         group_help()
+    # Check if command is to create new group
     elif command == 'C':
         create_group(d)
+    # Check if command is to list groups
     elif command == 'G':
         list_groups(d)
+    # Check if command is to add data to a group
     elif command == 'A':
         add_group_data(d)
+    # Check if command is to list data in a group
     elif command == 'L':
         list_group_data(d)
