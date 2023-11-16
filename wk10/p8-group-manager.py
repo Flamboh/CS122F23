@@ -11,21 +11,32 @@ def group_help():
 def create_group(d):
     print("** Create new group **\n")
     while True:
+        # Prompt for group name
         group_name = input("Enter group name (empty to cancel): ")
+        # End loop if group name blank
         if group_name == "":
             print()
             break
+        # Reprompt if group already exists
         elif group_name in d:
             print("Group already exists\n")
         else:
+            # Blank list of fields to add to later
             fields = []
             while True:
+                # The next field to add
                 field_to_add = input("Enter field name (empty to stop): ")
+                # Fields are done if blank
                 if field_to_add == "":
                     print()
                     break
                 else:
+                    # Put next field at the end of the fields list so far
                     fields.append(field_to_add)
+            # A group will have a name and will be a dictionary containing 2 keys: __fields__ and __data__
+            # __fields__ will correspond to a list of fields
+            # __data__ will correspond to a blank list for now, later that list will containd dictionaries
+            # of items of that group type 
             d[group_name] = {
                 '__fields__': fields,
                 '__data__': [
@@ -37,8 +48,11 @@ def create_group(d):
 
 def list_groups(d):
     print("** List of groups **")
+    # Loop through each group that exists
     for group in d:
+        # The list of all the fields in the given group
         field_list = ', '.join(d[group]['__fields__'])
+        # Display the group name, the number of fields, and the names of the fields
         print(f"{group} : {len(d[group]['__fields__'])} properties ({field_list})")
     print()
 

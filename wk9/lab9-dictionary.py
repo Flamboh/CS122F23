@@ -1,3 +1,11 @@
+"""
+CS 122 Fall 2023 Lab 9 Dictionary
+Author: Oliver Boorstein
+Credit:
+Description: Learn about dictionaries
+"""
+
+
 student = {
     'id': '123456789',
     'first_name': 'John',
