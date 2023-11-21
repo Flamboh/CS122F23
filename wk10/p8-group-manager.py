@@ -33,13 +33,13 @@ def create_group(d):
                 else:
                     # Put next field at the end of the fields list so far
                     fields.append(field_to_add)
-            # A group will have a name and will be a dictionary containing 2 keys: __fields__ and __data__
-            # __fields__ will correspond to a list of fields
-            # __data__ will correspond to a blank list for now, later that list will containd dictionaries
+            # A group will have a name and will be a dictionary containing 2 keys: _fields_ and _data_
+            # _fields_ will correspond to a list of fields
+            # _data_ will correspond to a blank list for now, later that list will containd dictionaries
             # of items of that group type 
             d[group_name] = {
-                '__fields__': fields,
-                '__data__': [
+                '_fields_': fields,
+                '_data_': [
 
                 ]
             }
@@ -51,9 +51,9 @@ def list_groups(d):
     # Loop through each group that exists
     for group in d:
         # The list of all the fields in the given group
-        field_list = ', '.join(d[group]['__fields__'])
+        field_list = ', '.join(d[group]['_fields_'])
         # Display the group name, the number of fields, and the names of the fields
-        print(f"{group} : {len(d[group]['__fields__'])} properties ({field_list})")
+        print(f"{group} : {len(d[group]['_fields_'])} properties ({field_list})")
     print()
 
 def add_group_data(d):
@@ -74,12 +74,12 @@ def add_group_data(d):
             # and with our inputs as the values for each key
             item = {}
             # for each field (0, x)
-            for field_index in range(len(d[group]['__fields__'])):
+            for field_index in range(len(d[group]['_fields_'])):
                 # Adding a key to item of the name of the field we are on
                 # Setting the value associated with that key to our input
-                item[d[group]['__fields__'][field_index]] = input(f"Enter {d[group]['__fields__'][field_index]}: ")
-            # Add the dictionary item to the end of the list of __data__    
-            d[group]['__data__'].append(item)
+                item[d[group]['_fields_'][field_index]] = input(f"Enter {d[group]['_fields_'][field_index]}: ")
+            # Add the dictionary item to the end of the list of data_    
+            d[group]['_data_'].append(item)
             print()       
     print()
 
@@ -101,13 +101,13 @@ def list_group_data(d):
             # Number of items for printing
             item_num = 0
             # For each item that we stored earlier in data
-            for item in d[group]['__data__']:
+            for item in d[group]['_data_']:
                 # Blank list
                 t = []
                 # for each key that is in item
-                for key in item:
+                for key, value in item.items():
                     # add to end of blank list the key name and the value associated with the key
-                    t.append(f"{key} = {item[key]}")
+                    t.append(f"{key} = {value}")
                 # Set item_list equal to a comma delimitted list of the values and keys
                 print(f"{item_num} {', '.join(t)}")
                 item_num += 1

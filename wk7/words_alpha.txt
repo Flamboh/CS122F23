@@ -558,7 +558,6 @@ ablaut
 ablauts
 ablaze
 able
-abled
 ableeze
 ablegate
 ablegates
@@ -1438,6 +1437,7 @@ acceleration
 accelerations
 accelerative
 accelerator
+acceleratorh
 acceleratory
 accelerators
 accelerograph
@@ -73221,7 +73221,6 @@ cryptococcus
 cryptocommercial
 cryptocrystalline
 cryptocrystallization
-cryptocurrency
 cryptodeist
 cryptodynamic
 cryptodira
@@ -86201,7 +86200,6 @@ dinornithidae
 dinornithiformes
 dinornithine
 dinornithoid
-dino
 dinos
 dinosaur
 dinosauria
@@ -198694,7 +198692,6 @@ neptunium
 neral
 nerd
 nerds
-nerdy
 nere
 nereid
 nereidae
@@ -298301,9 +298298,6 @@ spalls
 spalpeen
 spalpeens
 spalt
-spam
-spammed
-spamming
 span
 spanaemia
 spanaemic
@@ -327925,7 +327919,6 @@ transfusionist
 transfusions
 transfusive
 transfusively
-transgender
 transgeneration
 transgenerations
 transgredient
@@ -369812,6 +369805,7 @@ zoographic
 zoographical
 zoographically
 zoographist
+zoogrpahy
 zooid
 zooidal
 zooidiophilous

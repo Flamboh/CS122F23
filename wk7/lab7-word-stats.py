@@ -41,8 +41,10 @@ def letter_calc(letter, file):
     percentage = round(amount / count * 100, 2)
     return amount, percentage
 
+fin = "CS122F23\wk7\words_alpha.txt"
+
 # Tally and display word count
-word_list = open("wk7\words_alpha.txt")
+word_list = open(fin)
 count = 0
 
 for line in word_list:
@@ -52,7 +54,7 @@ print(f"Count: {count}")
 word_list.close()
 
 # Find and display longest word
-word_list = open("wk7\words_alpha.txt")
+word_list = open(fin)
 longest_word = ""
 
 for line in word_list:
@@ -63,7 +65,7 @@ print(f"Longest word is {longest_word} ({len(longest_word)})")
 word_list.close()
 
 # Find and display shortest word
-word_list = open("wk7\words_alpha.txt")
+word_list = open(fin)
 
 shortest_word = longest_word
 
@@ -75,7 +77,7 @@ print(f"Shortest word is {shortest_word} ({len(shortest_word)})")
 word_list.close()
 
 # Find Palindromes
-word_list = open("wk7\words_alpha.txt")
+word_list = open(fin)
 palindrome_count = 0
 
 for line in word_list:
@@ -88,8 +90,8 @@ word_list.close()
 print("First letter counts")
 alpha_words_count = 0
 for c in "abcdefghijklmnopqrstuvwxyz":
-    print(f"{c.upper()}: {letter_calc(c, 'wk7/words_alpha.txt')[0]} ({letter_calc(c, 'wk7/words_alpha.txt')[1]}%)")
-    alpha_words_count += letter_calc(c, 'wk7/words_alpha.txt')[0]
+    print(f"{c.upper()}: {letter_calc(c, fin)[0]} ({letter_calc(c, fin)[1]}%)")
+    alpha_words_count += letter_calc(c, fin)[0]
 
  
 other_count = alpha_words_count - count

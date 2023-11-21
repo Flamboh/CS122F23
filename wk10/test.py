@@ -35,7 +35,21 @@ d['Songs']['__data__'].append(song)
 
 print()
 
-for item in d['Songs']['__data__']:
-    print(item)
+for i, value in enumerate(d['Songs']['__data__']):
+    print(i, value)
 print(d['Songs']['__data__'])
 print(d)
+
+
+
+# nums = [2, 3, 4]
+
+# target = 6
+
+# def twoSum(nums, target):
+#     seen = {}
+#     for i, value in enumerate(nums):
+#         print(value)
+
+
+# twoSum(nums, target)

@@ -12,7 +12,7 @@ while True:
         break
     
     
-    word_list = open("wk7\words_alpha.txt")
+    word_list = open("CS122F23\wk7\words_alpha.txt")
 
     count = 0
     word_found = False
