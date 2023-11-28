@@ -120,7 +120,7 @@ print("This program creates groups with dynamic properties\n")
 
 d = {}
 while True:
-    print(d)
+    # print(d)
     # Get command
     command = input("Command (empty or X to quit, ? for help): ").strip().upper()
     # Check if command is to exit
